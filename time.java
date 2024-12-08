@@ -17,7 +17,7 @@ public class time {
      * @return String - ISO 8061 formatted UTC time string.
      */
     public static String convertedLocalDate(ZonedDateTime date){
-        //return date.format(DateTimeFormatter.ISO_INSTANT);
+        return date.format(DateTimeFormatter.ISO_INSTANT);
     }
     /**
      * Returns the number of days between two dates.
