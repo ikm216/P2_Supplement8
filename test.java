@@ -19,6 +19,5 @@ public class test{
         LocalDate end = LocalDate.of(2024, 12, 7);
         long days = time.numberOfDaysBetween(start, end);
         Assert.assertEquals(6, days);
-        
     }
 }

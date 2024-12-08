@@ -20,4 +20,8 @@ public class time {
         ZonedDateTime dateTime = date.atStartOfDay(ZoneOffset.UTC);
         return dateTime.format(DateTimeFormatter.ISO_INSTANT);
     }
+
+    public static long numberOfDaysBetween(LocalDate start, LocalDate end){
+        return java.time.temporal.ChronoUnit.DAYS.between(start, end);
+    }
 }
