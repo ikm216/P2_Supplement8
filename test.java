@@ -1,5 +1,6 @@
 import org.junit.*;
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 public class test{
     @Test
@@ -10,8 +11,9 @@ public class test{
     @Test
     public void test_should_return_converted_local_date(){
         ZonedDateTime date = ZonedDateTime.of(2024, 12, 7, 14, 10, 31, 0, ZoneOffset.UTC);
+        String test = date.format(DateTimeFormatter.ISO_INSTANT);
         String convertedDate = time.convertedLocalDate(date);
-        Assert.assertEquals(convertedDate);
+        Assert.assertEquals(test, convertedDate);
     }
     @Test
     public void test_should_return_days_between_dates(){
