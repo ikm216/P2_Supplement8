@@ -16,11 +16,16 @@ public class time {
      * @param date LocalDate to convert.
      * @return String - ISO 8061 formatted UTC time string.
      */
-    public static String convertedLocalDate(LocalDate date){
-        ZonedDateTime dateTime = date.atStartOfDay(ZoneOffset.UTC);
-        return dateTime.format(DateTimeFormatter.ISO_INSTANT);
+    public static String convertedLocalDate(ZonedDateTime date){
+        //return date.format(DateTimeFormatter.ISO_INSTANT);
     }
-
+    /**
+     * Returns the number of days between two dates.
+     * 
+     * @param start The start date.
+     * @param end   The end date.
+     * @return long - The number of days between startDate and endDate.
+     */
     public static long numberOfDaysBetween(LocalDate start, LocalDate end){
         return java.time.temporal.ChronoUnit.DAYS.between(start, end);
     }

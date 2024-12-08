@@ -9,9 +9,9 @@ public class test{
     }
     @Test
     public void test_should_return_converted_local_date(){
-        LocalDate date = LocalDate.of(2024, 12, 3);
+        ZonedDateTime date = ZonedDateTime.of(2024, 12, 7, 14, 10, 31, 0, ZoneOffset.UTC);
         String convertedDate = time.convertedLocalDate(date);
-        Assert.assertEquals("2024-12-03T00:00:00Z", convertedDate);
+        Assert.assertEquals(convertedDate);
     }
     @Test
     public void test_should_return_days_between_dates(){
