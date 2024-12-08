@@ -1,4 +1,5 @@
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 public class time {
     /**
@@ -8,5 +9,9 @@ public class time {
      */
     public static ZonedDateTime currentDateTime(){
         return ZonedDateTime.now();
+    }
+    public static String convertedLocalDate(LocalDate date){
+        ZonedDateTime dateTime = date.atStartOfDay(ZoneOffset.UTC);
+        return dateTime.format(DateTimeFormatter.ISO_INSTANT);
     }
 }
