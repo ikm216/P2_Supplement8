@@ -13,4 +13,12 @@ public class test{
         String convertedDate = time.convertedLocalDate(date);
         Assert.assertEquals("2024-12-03T00:00:00Z", convertedDate);
     }
+    @Test
+    public void test_should_return_days_between_dates(){
+        LocalDate start = LocalDate.of(2024, 12, 1);
+        LocalDate end = LocalDate.of(2024, 12, 7);
+        long days = time.numberOfDaysBetween(start, end);
+        Assert.assertEquals(6, days);
+        
+    }
 }
