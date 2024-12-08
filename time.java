@@ -10,6 +10,12 @@ public class time {
     public static ZonedDateTime currentDateTime(){
         return ZonedDateTime.now();
     }
+    /**
+     * Converts a LocalDate to an ISO 8061 UTC time string.
+     * 
+     * @param date LocalDate to convert.
+     * @return String - ISO 8061 formatted UTC time string.
+     */
     public static String convertedLocalDate(LocalDate date){
         ZonedDateTime dateTime = date.atStartOfDay(ZoneOffset.UTC);
         return dateTime.format(DateTimeFormatter.ISO_INSTANT);
